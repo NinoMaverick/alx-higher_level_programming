@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-for i in range(0, 8):
-    for j in range(i + 1, 10):
-        print("{:d}{:d}".format(i, j), end=', ')
-print("{:d}{:d}".format(i + 1, j)
+for num in range(0, 10):
+    for numbs in range(num+1,10):
+        if num == 8 and numbs == 9:
+            print("{}{}".format(num, numbs))
+        else:
+            print("{}{}".format(num, numbs), end=", ")
