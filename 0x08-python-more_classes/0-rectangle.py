@@ -2,5 +2,4 @@
 """Defines a Rectangle class."""
 
 class Rectangle:
-    pass # making it an empty class
-
+    pass
