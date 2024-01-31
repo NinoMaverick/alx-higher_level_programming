@@ -19,10 +19,11 @@ class Rectangle:
     def width(self):
         """Get/set the width of the rectangle."""
         return self.__width
-@width.setter
+
+    @width.setter
     def width(self, value):
         if not isinstance(value, int):
-            raise TypeError("width must be an integer")
+            raise TypeError("width must be an integer")OA
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
@@ -64,6 +65,12 @@ class Rectangle:
             if i != self.__height - 1:
                 rect.append("\n")
         return ("".join(rect))
+
+    def _repr_(self):
+        """Return the string representation of the Rectangle."""
+        rect = "Rectangle(" + str(self.__width)
+        rect += ", " + str(self.__height) + ")"
+        return (rect)
 
     def __del__(self):
         """Print a message for every deletion of a Rectangle."""
