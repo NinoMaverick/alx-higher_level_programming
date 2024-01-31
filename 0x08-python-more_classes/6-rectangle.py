@@ -19,7 +19,8 @@ class Rectangle:
     def width(self):
         """Get/set the width of the rectangle."""
         return self.__width
-@width.setter
+
+    @width.setter
     def width(self, value):
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
@@ -64,6 +65,7 @@ class Rectangle:
             if i != self.__height - 1:
                 rect.append("\n")
         return ("".join(rect))
+    
     def __repr__(self):
         """Return the string representation of the Rectangle."""
         rect = "Rectangle(" + str(self.__width)
