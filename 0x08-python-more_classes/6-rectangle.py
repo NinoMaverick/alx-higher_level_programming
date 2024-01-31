@@ -4,6 +4,8 @@
 
 class Rectangle:
     """Represent a rectangle."""
+    
+    number_of_instances = 0  # Class attribute to track the number of instances
 
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle.
