@@ -4,7 +4,7 @@
 
 class Rectangle:
     """Represent a rectangle."""
-    
+
     number_of_instances = 0  # Class attribute to track the number of instances
 
     def __init__(self, width=0, height=0):
@@ -80,4 +80,3 @@ class Rectangle:
         """Print a message for every deletion of a Rectangle."""
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
-        
