@@ -5,6 +5,9 @@
 class Rectangle:
     """Represent a rectangle."""
 
+    number_of_instances = 0  # Class attribute to track the number of instances
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle.
 
@@ -12,6 +15,8 @@ class Rectangle:
             width (int): width of the new rectangle.
             height (int): height of the new rectangle.
         """
+
+        Rectangle.number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -19,6 +24,7 @@ class Rectangle:
     def width(self):
         """Get/set the width of the rectangle."""
         return self.__width
+
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
@@ -60,10 +66,11 @@ class Rectangle:
 
         rect = []
         for i in range(self.__height):
-            [rect.append('#') for j in range(self.__width)]
+            [rect.append(f'{self.print_symbol}') for j in range(self.__width)]
             if i != self.__height - 1:
                 rect.append("\n")
         return ("".join(rect))
+
     def __repr__(self):
         """Return the string representation of the Rectangle."""
         rect = "Rectangle(" + str(self.__width)
@@ -71,7 +78,6 @@ class Rectangle:
         return (rect)
 
     def __del__(self):
-        """Print a message for every deletion of a Rectangle.""" 
-        type(self).number_of_instances -= 1
+        """Print a message for every deletion of a Rectangle."""
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
-
