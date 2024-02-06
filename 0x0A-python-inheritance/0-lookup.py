@@ -7,6 +7,6 @@ def lookup(obj):
     Returns the dir of object obj
     """
 
-    obja = dir(obj)
-    return obja
+    obj1 = dir(obj)
+    return obj1
     
