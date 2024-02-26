@@ -8,6 +8,3 @@ def common_elements(set_1, set_2):
     return common_set
 
 
-set_1 = [2, 4, 6]
-set_2 = [2, 5, 7]
-print(common_elements(set_1, set_2))
